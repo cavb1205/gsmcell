@@ -1,4 +1,4 @@
-from run import db
+from app import db
 
 class User(db.Model):
 
@@ -15,10 +15,10 @@ class User(db.Model):
     cel_opt = db.Column(db.String(12))
     is_active = db.Column(db.Boolean, default=True)
     is_admin = db.Column(db.Boolean, default=False)
-    #almacen_id
+    almacen_id = db.Column(db.Integer, db.ForeignKey('almacenes.id'),nullable=False)
 
     def __repr__(self):
-        return '<User %r>' % self.username
+        return '<User %r>' % self.first_name
 
 
         

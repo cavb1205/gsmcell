@@ -1,0 +1,11 @@
+{% extends 'base.html'%}
+
+{%block content%}
+    <h1>Almacen:</h1>
+    {% for almacen in almacen_list%}
+        <li>{{almacen.id}}-{{almacen.name}}-{{almacen.address}}-{{almacen.city}}-{{almacen.is_active}}-{{almacen.value}}</li>
+    {%endfor%}
+    
+    
+    
+{% endblock %}
