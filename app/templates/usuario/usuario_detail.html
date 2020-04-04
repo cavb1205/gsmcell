@@ -1,0 +1,23 @@
+{% extends 'base.html'%}
+
+{% block content %}
+    <h1>Usuario No. {{user.id}}</h1>
+    <h2>Rut: {{user.rut}}</h2>
+    {% if user.username %}
+        <h2>Username: {{user.username}}</h2>
+    {% endif %}    
+    <h2>Nombres: {{user.first_name}}</h2>
+    <h2>Apellidos: {{user.last_name}}</h2>
+    <h2>Email: {{user.email}}</h2>
+    <h2>Tel. Celular: {{user.cel}}</h2>
+    {% if user.cel_opt %}
+        <h2>Tel. Opcional: {{user.cel_opt}}</h2>
+    {% endif %}    
+    <h2>Es Activo: {{user.is_active}}</h2>
+    <h2>Es Admin: {{user.is_admin}}</h2>
+    <h2>Almacen: {{user.almacenes.name}}</h2>
+
+
+
+
+{% endblock %}

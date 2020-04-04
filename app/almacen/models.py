@@ -18,5 +18,5 @@ class Almacen(db.Model):
     value = Column(Float, default=0)
     users = relationship('User', backref='almacenes', lazy=True)
 
-    def __str__(self):
-        return self.name
+    def __repr__(self):
+        return '<User %r>' % self.name

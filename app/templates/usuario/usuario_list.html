@@ -3,9 +3,8 @@
 {%block content%}
     <h1>Usuarios:</h1>
     {% for usuario in usuario_list%}
-        <li>{{usuario.id}}-{{usuario.first_name}}-{{usuario.last_name}}-{{usuario.email}}-{{usuario.is_active}}</li>
+        <li><a href="{{ url_for('usuario.usuario_detail', user_id=usuario.id)}}">{{usuario.id}}</a>-{{usuario.first_name}}-{{usuario.last_name}}-{{usuario.email}}-{{usuario.almacenes.name}}</li>
     {%endfor%}
-    
     
     
 {% endblock %}
