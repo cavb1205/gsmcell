@@ -1,10 +1,47 @@
-{% extends 'base.html'%}
+{% extends 'bootstrap/base.html' %}
+{% block styles %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+{%endblock%}
+
+{% block navbar %}
+    {% include 'nav-bar.html'%}
+{% endblock %}
 
 {%block content%}
-    <h1>Usuarios:</h1>
+<a href="{{url_for('usuario.usuario_create')}}" class="btn btn-primary">Agragar Usuario</a>
+<br>
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Rut</th>
+        <th scope="col">Nombres</th>
+        <th scope="col">Apellidos</th>
+        <th scope="col">Email</th>
+        <th scope="col">No.Celular</th>
+        <th scope="col">Estado</th>
+      </tr>
+    </thead>
+    <tbody>
     {% for usuario in usuario_list%}
-        <li><a href="{{ url_for('usuario.usuario_detail', user_id=usuario.id)}}">{{usuario.id}}</a>-{{usuario.first_name}}-{{usuario.last_name}}-{{usuario.email}}-{{usuario.almacenes.name}}</li>
+
+      <tr>
+        <th scope="row"><a href="{{url_for('usuario.usuario_detail', user_id=usuario.id)}}">{{usuario.id}}</a></th>
+        <td>{{usuario.rut}}</td>
+        <td>{{usuario.first_name}}</td>
+        <td>{{usuario.last_name}}</td>
+        <td>{{usuario.email}}</td>
+        <td>{{usuario.cel}}</td>
+        <td>{{usuario.is_active}}</td>
+      </tr>
+
     {%endfor%}
+    </tbody>
+  </table>
+
+
+
+       
     
     
 {% endblock %}
