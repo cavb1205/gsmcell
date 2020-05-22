@@ -3,7 +3,7 @@
 {%block content%}
     <h1>Almacen:</h1>
     {% for almacen in almacen_list%}
-        <li>{{almacen.id}}-{{almacen.name}}-{{almacen.address}}-{{almacen.city}}-{{almacen.is_active}}-{{almacen.value}}</li>
+        <li><a href="{{url_for('almacen.almacen_detail', almacen_id=almacen.id)}}">{{almacen.id}}</a>-{{almacen.name}}-{{almacen.address}}-{{almacen.city}}-{{almacen.is_active}}-{{almacen.value}}</li>
     {%endfor%}
     
     

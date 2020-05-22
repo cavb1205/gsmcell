@@ -1,0 +1,25 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+<div class="card">
+    <div class="card-header">
+      <h1>{{almacen.name}}</h1>
+    </div>
+    <div class="card-body">  
+      <h5 class="card-title">Dirección: {{almacen.address}}</h5>
+      <h5 class="card-title">Ciudad: {{almacen.city}}</h5>
+      <h5 class="card-title">Valor: {{almacen.value}}</h5>
+      
+
+      
+      <a href="#" class="btn btn-primary">Lista Almacen</a>
+      <a href="#" class="btn btn-warning">Editar Almacen</a>
+      <a href="#" class="btn btn-danger">Eliminar Almacen</a>
+    </div>
+  </div>
+  
+
+
+
+{% endblock %}

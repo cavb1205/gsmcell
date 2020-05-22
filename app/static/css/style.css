@@ -1,0 +1,533 @@
+
+body {
+    font-family: 'Source Sans Pro', Helvetica, sans-serif;
+    margin: 0;
+    
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?lylkzd');
+    src:  url('../fonts/icomoon.eot?lylkzd#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?lylkzd') format('truetype'),
+      url('../fonts/icomoon.woff?lylkzd') format('woff'),
+      url('../fonts/icomoon.svg?lylkzd#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-menu:before {
+    content: "\e9bd";
+  }
+
+
+
+
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    flex:1;
+    justify-content: space-between;
+    background-color: #1b2127;
+    color: #fff;
+    height: 100px;
+    position: relative;
+    
+    
+    
+}
+
+.header a {
+    color: #fff;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+    text-decoration: none;
+}
+
+
+.menu {
+    height: inherit;
+    padding-right: 20px;
+    
+}
+
+.header ol {
+    display:flex;
+    height: inherit;
+}
+
+.header ol li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Source Sans Pro', Arial;
+    font-weight: normal;
+}
+
+h1 {
+    color: white;
+    line-height: 1.5;
+    font-size: 35px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+.hero {
+    
+    background-color: #1b2127;
+    padding: 20px;    
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero h1 {
+    max-width: 500px;
+}
+
+.portfolio {
+    background: #1D2A40;
+    
+}
+
+.project {
+   
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   margin-bottom: 10px;
+   padding: 10px;
+   
+}
+
+.project-detail {
+    width: 48%;
+    color: #fafafa;
+    
+}
+.project-detail h2 {
+    color: white;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 30px;
+}
+.project-container-image {
+    width: 48%;
+    margin: auto;
+    
+    text-align: center;
+}
+.project-container-image img {
+    border-radius: 15px;
+    width: auto;
+    
+    
+}
+
+.project-description {
+    font-size: 20px;
+}
+
+.category-service {
+    padding: 20px;
+    
+}
+.category-service h2 {
+    text-align: center;
+    color: #1b2127;
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+.category-service-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly; 
+    
+    
+}
+
+.category-service-box {
+    width: 45%;
+    height: 45%;
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+    text-decoration: none;
+    
+}
+
+.category-service-box-title a {
+    text-decoration: none;
+    color: #1b2127;
+    font-weight: 600;
+}
+
+.info-repair {
+    
+    background-color: #1D2A40;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.info-repair-text {
+    max-width: 400px;
+}
+
+.info-repair-text h2 {
+    color: #fafafa;
+    font-weight: bold;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.info-repair-text p {
+    color: #fafafa;
+    text-align: center;
+}
+
+.info-repair-image {
+    max-width: 400px;
+}
+
+.info-repair-image img {
+    border-radius: 15px;
+}
+
+
+
+
+.contact-social {
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid transparent;
+    
+    
+}
+
+
+.contact {
+    max-width: 500px;
+    text-align: center;
+    padding: 1em;
+    margin: 0 50px;
+    
+}
+
+
+
+.form input {
+    display: block;
+    
+    margin: 0 auto;
+    margin-bottom: 2px;
+}
+.form a {
+    border: solid 1px blue;  
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 2px 15px;
+   
+}
+
+.social {
+     
+    max-width: 400px;
+    padding: 1em;
+    margin: 0 50px;
+}
+
+.social-link-twitter {
+    margin: 10px;
+}
+
+.social-link-facebook {  
+    margin: 10px;
+}
+
+
+.social-link-whatsapp {
+    margin: 10px;
+}
+
+.footer {
+    color: #fafafa;
+    background: #1b2127;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border: 1px solid transparent;
+    text-align: center;
+   
+   
+}
+
+.footer a {
+    color: #fafafa;
+    
+    
+}
+.name {
+    width: 300px;
+    margin: 0 50px;
+    
+}
+.design {
+    width: 300px;
+    margin: 0 50px;
+    
+}
+
+
+
+.repair-box {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 10px;
+    
+}
+
+.repair-box-description {
+    
+    width: 500px;
+    
+    
+   
+}
+
+.repair-box-description h1 {
+    color: blue;
+    text-transform: capitalize;
+}
+.container {
+    
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1em;
+    height: inherit;
+    display: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+    flex-wrap: inherit;
+    flex-shrink: inherit;
+    flex: inherit;
+    
+    
+   
+}
+
+.icon-menu {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+    background-color: rgba(29,42,64,.5);
+    position: fixed;
+    text-align: center;
+    top:5px;
+    left: 5px;
+    z-index: 5;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: #fafafa;
+
+}
+
+@media screen and (max-width: 1024px){
+  .hero {
+    padding: 1em;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+  }
+  .hero h1 {
+      position: relative;
+      z-index: 2;
+      padding: 1em 0;
+  }
+  .hero img {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px){
+    .icon-menu {
+        display: flex;
+    }
+    .header {
+        display: block;
+        height: auto;
+        padding: 1em;
+    }
+    .header ol {
+        display: block;
+        margin: auto;
+    }
+    .header ol li {
+        height: 40px;
+        
+    }
+    .header a {
+        justify-content: center;
+        text-decoration: underline;
+    }
+    .header .logo {
+        text-align: center;
+        
+    }
+
+    .menu {
+        position: fixed;
+        z-index: 4;
+        background-color: rgba(59,89,152,.9);
+        top: 0;
+        bottom: 0;
+        left: -100vw;
+        padding-top: 2em;
+        transition: .5s;
+    }
+    .menu.is-active{
+        left: 0;
+    }
+    .project {
+        display: block;
+        padding: 20px;
+    }
+    .project-detail {
+        width: auto;
+        padding: 20px;
+        font-size: 20px;
+    }
+    .project-detail h2 {
+        font-size: 1.5em;
+    }
+    .project-description {
+        font-size: 1em;
+    }
+    .project-container-image {
+        width: auto;
+        text-align: center;
+    }
+    .project-container-image img {
+        max-width: 100%;
+    }
+    .info-repair {
+        display: block;
+        text-align: center;
+        padding: 1em;
+        
+    }
+    .info-repair-text {
+        max-width: auto;
+        margin: auto;
+    }
+    .info-repair-image img {
+        width: 350px;
+        height: 250px;
+    }
+    .info-repair-image {
+        max-width: auto;
+        margin: auto;
+    }
+
+    .contact-social{
+        display: block;
+        text-align: center;
+    }
+    .contact {
+        margin: auto;
+    }
+    .social {
+        margin: auto;
+    }
+    .footer {
+        display: block;
+        text-align: center;
+    }
+    .name {
+        margin: auto;
+    }
+    .design {
+        margin: auto;
+    }
+}
+
+
+
+@media screen and (max-width: 424px){
+    .project-detail {
+        font-size: 18px;
+    }
+    .info-repair-image img {
+        width: 300px;
+        height: 200px;
+    }
+    .contact-social{
+        display: block;
+        text-align: center;
+    }
+    .contact {
+        margin: auto;
+    }
+    .social {
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .project-detail {
+        font-size: 15px;
+    }
+    .info-repair-image img {
+        width: 250px;
+        height: 150px;
+    }
+}

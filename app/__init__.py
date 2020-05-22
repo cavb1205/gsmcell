@@ -9,6 +9,7 @@ db = SQLAlchemy()
 
 def create_app():
     app = Flask(__name__)
+    db.init_app(app)
     Bootstrap(app)
   
   
@@ -23,9 +24,11 @@ def create_app():
     #register blueprints
     from app.usuario import usuario
     from app.almacen import almacen
+    from app.inversion import inversion 
 
     app.register_blueprint(almacen)
     app.register_blueprint(usuario)
+    app.register_blueprint(inversion)
 
 
 

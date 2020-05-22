@@ -1,12 +1,181 @@
-{% extends 'bootstrap/base.html' %}
-{% block styles %}
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-{%endblock%}
 
-{% block navbar %}
-    {% include 'nav-bar.html'%}
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="icon" href="static/images/icono.svg" type="image/svg">
+    
+    <title>GSMCELL</title>
+</head>
+<body>
+    
+    <header class="header">
+        
+        <div class='container'>
+            <i class="icon-menu" id="menu"></i>
+                <figure class="logo">
+                    <img src="static/images/logo-gsmcell.jpg" width="60" height="60" alt="Logo de GSMCELL">
+                </figure>
+                <nav class="menu">
+                    <ol>
+                        <li><a class="link" href="/">Inicio</a></li>
+                        <li><a class="link" href="#portafolio">Servicios</a></li>
+                        <li><a class="link" href="#contacto">Contactanos</a></li>
+                        <li><a class="link" href="#contacto">Estado De Mi Reparación</a></li>
+                        <li><a class="link" href="/usuario">LogIn</a></li>
+                    </ol>
+                </nav>
+        </div>
+    </header>
+    <section class="hero"> 
+        <div class="container">
+            <h1>Reparamos tu iPhone, iPad y Otras Marcas</h1>
+            <img src="static/images/hero.gif" alt="imagen iphone" width="500px" height="300px">
+        </div>
+    </section> 
+    <section id='portafolio' class="portfolio">
+        <div class="container">
 
-{%block content%}
-    <h1>Home page</h1>
-{%endblock%}
+            <article class="project">
+                <div class="project-detail">
+                    <h2 class="project-title">Repara Tu iPhone - iPad Con Nosotros</h2>
+                    <p class="project-description">-Equipo No Enciende <br> -Display Quebrado. <br> -Bateria No Dura. <br> -Camara no Funciona. <br> -Auricular no Suena. <br> -Altavoz no Funciona <br> O Simplemente dejo de Funcionar otra pieza.</p>
+                    <p class="project-description">Nuestros técnicos expertos se encargarán de dejar tu iPhone, lo más rápido y funcional que puedas imaginar. Atrévete a vivir una nueva experiencia Apple.</p>
+                </div>
+                <figure class="project-container-image">
+                    <img class="project-image" src="static/images/iphone11-pro-max.png" alt="mantenimiento-celulares" width="350" height="250">
+                </figure>   
+            </article>
+            <article class="project">
+                <div class="project-detail">
+                    <h2 class="project-title">Mantén Al Día Tu iPhone - iPad</h2>
+                    <p class="project-description">-Expancion de memoria de iPhone y iPad. <br> -Activación Teléfonos. <br> -Recuperación de Datos en iPhone <br> -Actualización de Software.</p>
+                    <p class="project-description">Nuestros técnicos expertos se encargarán de dejar tu iPhone, lo más rápido y funcional que puedas imaginar. Atrévete a vivir una nueva experiencia Apple.</p>
+                </div>
+                <figure class="project-container-image">
+                    <img class="project-image" src="static/images/iphon-maintance.jpg" alt="mantenimiento-celulares" width="350" height="250">
+                </figure>   
+    
+            </article>
+        </div>
+    </section>
+
+    <section class="category-service">
+        <div class="container">
+            <h2>¿En qué te ayudamos?</h2>
+            <div class="category-service-container">
+                <div class="category-service-box">
+                    <div class="category-service-box-image">
+                        <a href="{{url_for('comun')}}"><img src="static/images/bateria-mala.jpg" alt=""></a>
+                    </div>
+                    <div class="category-service-box-title">
+                        <h4><a href="{{url_for('comun')}}">Batería Dañada</a></h4>
+                    </div>
+                    <div class="category-service-box-description">
+                        <p>Sustitución en tiempo récord. Las batería tienen un ciclo de vida determinado, ven y deja tu celular como nuevo.</p>
+                    </div>
+                </div>
+                <div class="category-service-box">
+                    <div>
+                        <a href="{{url_for('comun')}}"><img src="static/images/pantalla-quebrada.jpg" alt=""></a>
+                    </div>
+                    <div class="category-service-box-title">
+                        <h4><a href="{{url_for('comun')}}">Pantalla Quebrada</a></h4>
+                    </div>
+                    <div>
+                        <p>Los mejores repuestos y la garantía que pocos lugares te dan. Además de un gran profesionalismo, te esperamos.</p>
+                    </div>
+                </div>
+                <div class="category-service-box">
+                    <div>
+                        <a href="{{url_for('comun')}}"><img src="static/images/touch-no-funcciona.jpg" alt=""></a>
+                    </div>
+                    <div class="category-service-box-title">
+                        <h4><a href="{{url_for('comun')}}">Touch No Funciona</a></h4>
+                    </div>
+                    <div>
+                        <p>Uno de los problemas más molestos que puede hacerte perder tiempo y dinero, Te lo solucionamos en menos de lo que imaginas.</p>
+                    </div>
+                </div>
+                <div class="category-service-box">
+                    <div>
+                        <a href="{{url_for('comun')}}"><img src="static/images/agua.jpg" alt=""></a>
+                    </div>
+                    <div class="category-service-box-title">
+                        <h4><a href="{{url_for('comun')}}">Equipo Mojado</a></h4>
+                    </div>
+                    <div>
+                        <p>¿Tu dispositivo moría de calor y decidió sumergirse al agua? No te preocupes que en eso somos expertos, tráelo pronto!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="info-repair">
+        <div class="container">
+
+            <div class="info-repair-text">
+                <h2>Tu Reparación En Línea</h2>
+                <p>La mayoría de las reparaciones se solucionan en unas horas.
+                    para reparaciones mas complicadas que requieren de más tiempo de dedicación hemos creado para ti un sistema donde puedes ver el estado de tu reparación en línea en cualquier momento.</p>
+                <p><button>Consultar Servicio</button>   </p> 
+            </div>
+            <figure class="info-repair-image">
+                <img src="static/images/Ipad-search.jpg" alt="imagen ipad mostrando informacion" width="500" height="300" >
+            </figure>
+        </div>
+    </section> 
+    <section class="contact-social">
+        <div class="container">
+
+            <div id='contacto'class="contact">
+                <form action="" method="post" class="form">
+                    <h2>Contáctanos</h2>
+                    <input type="text" placeholder="Asunto">
+                    <input type="email" name="email" id="email" placeholder="Email">
+                    <input type="text" placeholder="Mensaje">
+                    <br>
+                    <a href="#">Enviar</a>
+                </form>
+            </div>
+            <div class="social">
+               
+                <a href="https://twitter.com" class="social-link-twitter"><img src="static/images/twitter.svg" alt="icono twitter" width="50px" height="50px"></a>
+                <a href="https://facebook.com" class="social-link-facebook"><img src="static/images/facebook.svg" alt="icono facebook" width="50px" height="50px"></a>
+                <a href="#" class="social-link-whatsapp"><img src="static/images/wsp.svg" alt="icono whatsapp" width="50px" height="50px"></a>
+            </div>
+        </div>
+    </section> 
+    <footer class="footer">
+        <div class="container">
+
+            <div class="name">
+                <p>Servicio Técnico GSMCELL 2020 </p>
+            </div>
+            <div class="design">
+                <p>Creado Por <a href="https://twitter.com/cavb1205">@cavb1205</a></p>
+            </div>
+        </div>
+    </footer> 
+    <script>
+        const menu = document.querySelector('.menu')
+        const menuButton = document.querySelector('#menu')
+        menuButton.addEventListener('click', hideshow)
+
+        function hideshow(){
+            if (menu.classList.contains('is-active')){
+
+                menu.classList.remove('is-active')
+            }
+            else {
+                menu.classList.add('is-active')
+            }
+        }
+    </script>
+</body>
+</html>
